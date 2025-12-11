@@ -3,7 +3,7 @@
 **Date:** 12/11/2025
 
 ## 1. Project Title 
-SynthLPR-PH: Semantic Segmentation-Based Philippine License Plate Character Recognition from Procedurally Generated Synthetic Data [1][4]
+Segmentation-Based Philippine License Plate Character Recognition from Procedurally Generated Synthetic Data
 
 ## 2. Problem Statement
 Standard Optical Character Recognition (OCR) models and off-the-shelf text detectors are not designed around license plate fonts and layouts, and they typically require heavy preprocessing to cope with blur, noise, and difficult lighting in unconstrained road scenes. [1][2] These limitations are amplified in the Philippine context, where legacy and modern plate designs coexist, diverging from the datasets on which generic OCR systems are trained. [9] This project aims to build a Philippine-specific license plate character recognizer by training a custom semantic segmentation CNN from scratch on synthetic images that replicate local plate styles, backgrounds, and capture artifacts, reducing reliance on black-box OCR engines and handcrafted pipelines. [4][7]
