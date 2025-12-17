@@ -27,7 +27,9 @@
         - Sharpening (simulate halo effect from artificial enhancements made by cheaper cctv cameras)
 
 **Sample data preview:**
-![Dataset Sample](images/dataset_sample.png)
+<figure>
+  <img src="documentation/dataset_example.png" alt="Philippine License Plates Color Palettes" width="300" />
+</figure>
 
 ## 2. Training Progress
 
