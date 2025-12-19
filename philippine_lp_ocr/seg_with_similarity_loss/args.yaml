@@ -1,6 +1,6 @@
 task: segment
 mode: train
-model: models\yolo11n-seg.pt
+model: models/custom_ocr_last.pt
 data: dataset/data.yaml
 epochs: 300
 time: null
@@ -10,8 +10,8 @@ imgsz: 224
 save: true
 save_period: 10
 cache: false
-device: cpu
-workers: 8
+device: mps
+workers: 0
 project: philippine_lp_ocr
 name: seg_with_similarity_loss
 exist_ok: true
@@ -24,7 +24,7 @@ single_cls: false
 rect: false
 cos_lr: false
 close_mosaic: 10
-resume: false
+resume: models/custom_ocr_last.pt
 amp: false
 fraction: 1.0
 profile: false
@@ -103,4 +103,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\lifei\OneDrive\Desktop\CSC173 - Intelligent Systems\CSC173-DeepCV-Sanchez\philippine_lp_ocr\seg_with_similarity_loss
+save_dir: /Users/joshuaradzadlaon/Documents/vscode/CSC173-DeepCV-Sanchez/philippine_lp_ocr/seg_with_similarity_loss
