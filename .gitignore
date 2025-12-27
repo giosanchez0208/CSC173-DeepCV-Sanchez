@@ -1,6 +1,9 @@
 dataset/
 dataset.zip
+CatEye-ALPR-v3-3
+CatEye-ALPR-v3-3-Merged
 
+_archive/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
