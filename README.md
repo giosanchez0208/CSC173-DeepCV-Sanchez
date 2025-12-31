@@ -305,7 +305,7 @@ RefinedSimilarityAwareTopKLoss(
 ![Training Curve](images/loss_accuracy.png)
 
 ### Demo
-![Detection Demo](philippine_lp_ocr/seg_with_similarity_loss/training_analysis.png)
+![Detection Demo](documentation/model_detection.gif)
 [Video: [CSC173_YourLastName_Final.mp4](https://raw.githubusercontent.com/giosanchez0208/CSC173-DeepCV-Sanchez/main/demo/CSC173_Sanchez_Final.mp4)]
 
 ## Discussion
