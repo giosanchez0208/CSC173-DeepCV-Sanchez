@@ -306,11 +306,16 @@ RefinedSimilarityAwareTopKLoss(
 
 ### Demo
 ![Detection Demo](documentation/model_detection.gif)
+
+
+
 <div align="center">
   <video src="demo/CSC173_Sanchez_Final.mp4" width="100%" controls>
     Your browser does not support the video tag.
   </video>
 </div>
+
+
 
 ## Discussion
 
