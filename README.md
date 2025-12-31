@@ -306,8 +306,7 @@ RefinedSimilarityAwareTopKLoss(
 
 ### Demo
 ![Detection Demo](documentation/model_detection.gif)
-<video src="https://raw.githubusercontent.com/giosanchez0208/CSC173-DeepCV-Sanchez/main/demo/CSC173_Sanchez_Final.mp4" controls="controls" style="max-width: 100%;">
-  Your browser does not support the video tag.
+<video src="demo/CSC173_Sanchez_Final.mp4" controls="controls" style="max-width: 100%;">
 </video>
 
 ## Discussion
