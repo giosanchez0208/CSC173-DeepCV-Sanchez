@@ -1,60 +1,46 @@
 # CSC173 Deep Computer Vision Project Progress Report
-**Student:** [Your Name], [ID]  
-**Date:** [Progress Submission Date]  
-**Repository:** [https://github.com/yourusername/CSC173-DeepCV-YourLastName](https://github.com/yourusername/CSC173-DeepCV-YourLastName)  
-
+**Student:** Gio Kiefer A. Sanchez, 2022-0025
+**Date:** December 31, 2025
+**Repository:** [https://github.com/giosanchez0208/CSC173-DeepCV-Sanchez](https://github.com/giosanchez0208/CSC173-DeepCV-Sanchez)
 
 ## 📊 Current Status
 | Milestone | Status | Notes |
 |-----------|--------|-------|
-| Dataset Preparation | ✅ Completed | [X] synthetic data generated |
-| Initial Training | ⏳ Pending | [X] code ready, will use computers in cs department |
-| Baseline Evaluation | ⏳ Not Started | Planned for tomorrow |
-| Model Fine-tuning | ⏳ Not Started | Planned for tomorrow |
+| Dataset Preparation | ✅ Completed | 20,000 synthetic images generated with pixel-level masks |
+| Initial Training | ✅ Completed | Base model trained for 68 epochs on YOLO11n-seg |
+| Baseline Evaluation | ✅ Completed | Compared against EasyOCR and Pytesseract |
+| Model Fine-tuning | ✅ Completed | Refinement phase completed (40 epochs) with progressive unfreezing |
 
 ## 1. Dataset Progress
-- **Total images:** 20000 (with segmentation masks)
-- **Train/Val/Test split:** 80%/10%/10%
-- **Classes implemented:** 36 (A-Z, 0-9)
-- **Preprocessing applied:** 
-        - Text-Level Paint Chipping
-        - Plate-Level Obfuscation
-        - Affining (Perspective, Rotation, Transform)
-        - Motion Blur
-        - Surveillance Camera-Style Compression
-        - Grayscale
-        - CLAHE (simulate dark/light area adjustments by IPS)
-        - Sharpening (simulate halo effect from artificial enhancements made by cheaper cctv cameras)
-
-**Sample data preview:**
-<figure>
-  <img src="documentation/dataset_example.png" alt="Philippine License Plates Color Palettes" width="300" />
-</figure>
+* **Total images:** 20,000 (with segmentation masks)
+* **Train/Val/Test split:** 80% / 10% / 10%
+* **Classes implemented:** 36 (A-Z, 0-9)
+* **Preprocessing/Augmentations applied:** * **Text-Level:** Paint chipping via erosion masks and parametric embossing
+    * **Plate-Level:** Dirt/grime overlays and auxiliary text placement
+    * **Geometric:** 4-point perspective warp and bicubic rotation
+    * **CCTV Simulation:** Motion blur kernels, JPEG compression artifacts, and aggressive sharpening
+    * **ISP Simulation:** CLAHE on LAB color space and grayscale conversion
 
 ## 2. Training Progress
 
-**Training Curves (so far)**
-![Loss Curve](images/loss_curve.png)
-![mAP Curve](images/map_curve.png)
-
-**Current Metrics:**
-| Metric | Train | Val |
-|--------|-------|-----|
-| Loss | [0.45] | [0.62] |
-| mAP@0.5 | [78%] | [72%] |
-| Precision | [0.81] | [0.75] |
-| Recall | [0.73] | [0.68] |
+**Current Metrics (Custom OCR Model):**
+| Metric | Value |
+|--------|-------|
+| Precision | 0.0343 |
+| Recall | 0.0104 |
+| mAP@0.5 | 0.0078 |
+| Inference Time | 15.9ms |
 
 ## 3. Challenges Encountered & Solutions
 | Issue | Status | Resolution |
 |-------|--------|------------|
-| CUDA out of memory | ✅ Fixed | Reduced batch_size from 32→16 |
-| Class imbalance | ⏳ Ongoing | Added class weights to loss function |
-| Slow validation | ⏳ Planned | Implement early stopping |
+| Visually confusable characters | ✅ Fixed | Implemented `SimilarityAwareTopKLoss` to reduce penalties for similar pairs (O/0, I/1) |
+| Digit-heavy class imbalance | ✅ Fixed | Developed `CharacterBalancer` and 50% letter-heavy random formats |
+| Hardware constraints | ⏳ Ongoing | Limited training to 68 epochs (base) and 40 epochs (refinement) due to Colab quotas |
+| Sim-to-real gap | ⏳ Ongoing | Added motion blur, JPEG artifacts, and real-world background compositing |
 
 ## 4. Next Steps (Before Final Submission)
-- [ ] Complete training (50 more epochs)
-- [ ] Hyperparameter tuning (learning rate, augmentations)
-- [ ] Baseline comparison (vs. original pre-trained model)
-- [ ] Record 5-min demo video
-- [ ] Write complete README.md with results
+- [ ] Attempt final training run if dedicated GPU resources are secured
+- [ ] Implement Character Error Rate (CER) and Word Error Rate (WER) metrics
+- [ ] Validate model against real-world Philippine CCTV footage
+- [ ] Complete final README with failure mode analysis
