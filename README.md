@@ -37,6 +37,7 @@ This project establishes a synthetic-data-driven approach to Philippine license 
 3. **Preprocessing-Free Recognition Performance**: Achieve measurable improvement over general-purpose OCR systems (EasyOCR, Pytesseract) on the task of detecting main license plate text while ignoring auxiliary elements (region codes, small print). Target metrics: (a) 5x minimum improvement in precision/recall over baselines, (b) inference time <20ms per plate on consumer-grade hardware (M4 Mac/CUDA GPU), (c) character-level accuracy sufficient to demonstrate proof-of-concept for real-time CCTV integration, acknowledging that production deployment would require extended training beyond current hardware constraints.
 
 ![Problem Demo](documentation/license_plate_inference.gif)
+
 *The GIF above demonstrates low inference speed and high false positives when detecting the main license plate text without preprocessing.*
 
 ## Related Work
@@ -304,8 +305,8 @@ RefinedSimilarityAwareTopKLoss(
 ![Training Curve](images/loss_accuracy.png)
 
 ### Demo
-![Detection Demo](demo/detection.gif)
-[Video: [CSC173_YourLastName_Final.mp4](demo/CSC173_YourLastName_Final.mp4)]
+![Detection Demo](philippine_lp_ocr/seg_with_similarity_loss/training_analysis.png)
+[Video: [CSC173_YourLastName_Final.mp4](https://raw.githubusercontent.com/giosanchez0208/CSC173-DeepCV-Sanchez/main/demo/CSC173_Sanchez_Final.mp4)]
 
 ## Discussion
 
