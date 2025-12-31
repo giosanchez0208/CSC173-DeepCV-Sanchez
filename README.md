@@ -302,11 +302,12 @@ RefinedSimilarityAwareTopKLoss(
 | **Custom OCR** | **0.0343** | **0.0104** | **0.0078** | **0.0159s** | **1870/5079/177147** |
 | Custom OCR Refined | 0.0275 | 0.0091 | 0.0065 | 0.0160s | 1629/5139/177388 |
 
-![Training Curve](images/loss_accuracy.png)
+![Training Curve](philippine_lp_ocr/seg_with_similarity_loss/training_analysis.png)
 
 ### Demo
 ![Detection Demo](documentation/model_detection.gif)
-[Video: [CSC173_YourLastName_Final.mp4](https://raw.githubusercontent.com/giosanchez0208/CSC173-DeepCV-Sanchez/main/demo/CSC173_Sanchez_Final.mp4)]
+
+https://github.com/user-attachments/assets/f1a69dfa-3da7-4f1a-828e-6dd73042d447
 
 ## Discussion
 
