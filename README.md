@@ -309,11 +309,11 @@ RefinedSimilarityAwareTopKLoss(
 
 
 
-<div align="center">
-  <video src="demo/CSC173_Sanchez_Final.mp4" width="100%" controls>
+[<div align="center">
+  <video src="https://raw.githubusercontent.com/USER_NAME/REPO_NAME/main/demo/CSC173_Sanchez_Final.mp4" width="100%" controls>
     Your browser does not support the video tag.
   </video>
-</div>
+</div>](https://raw.githubusercontent.com/giosanchez0208/CSC173-DeepCV-Sanchez/main/demo/CSC173_Sanchez_Final.mp4)
 
 
 
